@@ -2,7 +2,7 @@ programa
 {
     funcao inicio()
     {
-        inteiro vetor[10]
+        inteiro vetor[10] = {2, 5, 1, 3, 4, 9, 7, 8, 10, 6}
         inteiro i, j, aux
 
         escreva("Digite 10 números inteiros:\n")
@@ -37,7 +37,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 625; 
+ * @POSICAO-CURSOR = 172; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

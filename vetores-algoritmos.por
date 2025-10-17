@@ -3,8 +3,7 @@ programa
     funcao inicio()
     {
         inteiro vetor[10]
-        inteiro i, soma = 0
-        real media
+        inteiro i, j, aux
 
         escreva("Digite 10 números inteiros:\n")
         para(i = 0; i < 10; i++)
@@ -13,32 +12,24 @@ programa
             leia(vetor[i])
         }
 
-        escreva("\nElementos nos índices ímpares:\n")
-        para(i = 0; i < 10; i++)
+        para(i = 0; i < 9; i++)
         {
-            se(i % 2 != 0)
+            para(j = 0; j < 9 - i; j++)
             {
-                escreva(vetor[i], " ")
+                se(vetor[j] < vetor[j + 1])
+                {
+                    aux = vetor[j]
+                    vetor[j] = vetor[j + 1]
+                    vetor[j + 1] = aux
+                }
             }
         }
 
-        escreva("\n\nElementos pares:\n")
+        escreva("\nvetor ordenado em ordem:\n")
         para(i = 0; i < 10; i++)
         {
-            se(vetor[i] % 2 == 0)
-            {
-                escreva(vetor[i], " ")
-            }
+            escreva(vetor[i], " ")
         }
-
-        para(i = 0; i < 10; i++)
-        {
-            soma = soma + vetor[i]
-        }
-        escreva("\n\nSoma dos elementos: ", soma)
-
-        media = soma / 10.0
-        escreva("\nMédia dos elementos: ", media)
     }
 }
 /* $$$ Portugol Studio $$$ 
@@ -46,7 +37,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 284; 
+ * @POSICAO-CURSOR = 625; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
